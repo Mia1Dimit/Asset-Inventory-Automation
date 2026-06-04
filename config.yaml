@@ -1,0 +1,108 @@
+# Azure Inventory Tool Configuration
+
+families:
+  compute:
+    enabled: true
+    resources:
+      virtualMachines: true
+      disks: true
+      virtualMachineScaleSets: true
+      sshPublicKeys: true
+      batchAccounts: true
+  storage:
+    enabled: true
+    resources:
+      storageAccounts: true
+      backupVaults: true
+  network:
+    enabled: true
+    resources:
+      virtualNetworks: true
+      networkInterfaces: true
+      networkSecurityGroups: true
+      loadBalancers: true
+      publicIPAddresses: true
+      privateEndpoints: true
+  database:
+    enabled: true
+    resources:
+      databaseAccounts: true
+      servers: true
+      databases: true
+      flexibleServers: true
+      Redis: true
+  appservices:
+    enabled: true
+    resources:
+      sites: true
+      serverFarms: true
+      serverfarms: true
+      connections: true
+      functionApps: true
+      webApps: true
+  keyvault:
+    enabled: true
+    resources:
+      vaults: true
+  messaging:
+    enabled: true
+    resources:
+      namespaces: true
+      domains: true
+      topics: true
+      storageQueues: true
+  monitoring_security:
+    enabled: true
+    resources:
+      workspaces: true
+      components: true
+      securityContacts: true
+  identity:
+    enabled: true
+    resources:
+      userAssignedIdentities: true
+      systemAssignedIdentities: true
+      b2cDirectories: true
+      registrations: true
+  synapse:
+    enabled: true
+    resources:
+      workspaces: true
+  datafactory:
+    enabled: true
+    resources:
+      factories: true
+  databricks:
+    enabled: true
+    resources:
+      workspaces: true
+  openshift:
+    enabled: true
+    resources:
+      openShiftClusters: true
+  containerRegistry:
+    enabled: true
+    resources:
+      registries: true
+  loadTesting:
+    enabled: true
+    resources:
+      loadTests: true
+  ai:
+    enabled: true
+    resources:
+      accounts: true
+      searchServices: true
+      botServices: true
+
+output:
+  export_json: true  
+  json_pretty: true  # Applies only if export_json is true
+  export_excel: true
+
+logging:
+  level: INFO
+
+retry:
+  max_attempts: 5
+  backoff_factor: 2
