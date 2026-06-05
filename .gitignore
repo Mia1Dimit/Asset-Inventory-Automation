@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+
+# Generated reports can contain sensitive internal metadata
+Reports/Excel/
+Reports/Json/
+*.xlsx
+
+# Local runtime and virtual environments
+.venv/
+venv/
+env/
+
+# IDE/system artifacts
+.vscode/
+.DS_Store
